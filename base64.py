@@ -41,9 +41,9 @@ def setUp(binary_string):
             print(base64_box[int("0b"+bin_str, 2)], end="")
             v,k = v+6, k+6
 
-    if len_binary == 1:
+    if len_binary % 3 == 1:
         print("=")
-    elif len_binary == 2:
+    elif len_binary % 3 == 2:
         print("==")
 
 binary = ""
@@ -58,4 +58,4 @@ def CreateBase64(string):
         #print(string[i] + " => " + "{0:b}".format(binary1))
     setUp(binary)
 
-CreateBase64("popsaa123")
+CreateBase64("hello")
