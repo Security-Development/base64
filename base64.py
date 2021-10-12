@@ -35,10 +35,13 @@ def setUp(binary_string):
         if len(bin_str) != 6:
             bin_str = bin_str.ljust(6, "0")
 
-        print("\n"+bin_str)
+        print(base64_box[int("0b"+bin_str, 2)], end="")
         v,k = v+6, k+6
- 
-        
+
+    if len_binary == 1:
+        print("=")
+    else:
+        print("==")
 
 binary = ""
 
@@ -52,4 +55,4 @@ def CreateBase64(string):
         #print(string[i] + " => " + "{0:b}".format(binary1))
     setUp(binary)
 
-CreateBase64("abcd")
+CreateBase64("popsaas")
